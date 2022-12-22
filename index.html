@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700&display=swap" rel="stylesheet">
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Generator</title>
+</head>
+<body>
+  <div class="container">
+
+    <div id="titleAndSub">
+      <h1 class="title-el">Generate a <br> <span style="color: #10B981;">random password</span></h1>
+      <p id="paragraph-el">Never use an insecure password again.</p>
+    </div>
+    <hr class="dividerTitle">
+
+    <div class="wapper">
+      <form class="form" action="">
+        <fieldset class="fieldClass">
+          <legend>Select wich type of password do you need:</legend>
+
+          <div class="form__group" style="--i: 1">
+            <input type="radio" id="berries_1" value="Letters only" name="radio">
+            <label for="berries_1">Letters only</label>
+          </div>
+
+          <div class="form__group" style="--i: 2">
+            <input type="radio" id="berries_2" value="Numbers only" name="radio">
+            <label for="berries_2">Numbers only</label>
+          </div>
+
+          <div class="form__group" style="--i: 3">
+            <input type="radio" id="berries_3" value="Letters and numbers" name="radio">
+            <label for="berries_3">Letters and numbers</label>
+          </div>
+
+        </fieldset>
+      </form>
+
+    </div>
+        
+    <button class="btn">Generate passwords</button>
+    <hr class="divider">
+
+    <div class="outputs">
+      <p id="firstSuggestion-el">output1</p>
+      <p id="secondSuggestion-el">output2</p>
+    </div>
+
+  </div>
+
+  
+</body>
+</html>
