@@ -3,3 +3,12 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O",
 
 
 
+var numbers = characters.filter(numbersOnly)
+
+console.log(numbers);
+
+function numbersOnly(value) {
+  if (typeof ( value ) === 'number' ) {
+    return value
+  } 
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+
+    <!-- STYLES -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./main.css" />
+
+    <script src="./copy.js" defer></script>
+    <script src="../index.js"></script>
+  </head>
+  <body>
+    <main id="card">
+      <h1>
+        Generate a <br />
+        <span class="green-text">random password</span>
+      </h1>
+
+      <h3>Never use an insecure password again.</h3>
+
+      <form>
+        <fieldset>
+          <legend>
+            How many characters <br />
+            do you need?
+          </legend>
+          <div class="input-wrapper">
+            <label for="characters">Insert a number between (4 and 25):</label>
+            <input
+              type="number"
+              id="characters"
+              min="4"
+              max="25"
+              value="4"
+              required
+            />
+          </div>
+          <button>Generate passwords</button>
+        </fieldset>
+      </form>
+
+      <div class="divider"></div>
+
+      <div class="result green-text">
+        <div class="field">
+          <div class="text">All characters</div>
+          <p class="passwordOutput" id="allCharacters"></p>
+
+          <div class="btn-container" >
+            <button class="output-btn" id="btn-all-characters" onclick="getResultAll()">Copy</button>
+
+          </div>
+            
+        </div>
+        <div class="field">
+          <div class="text">Letters only</div>
+          <input
+            class="passwordOutput"
+            id="onlyLetters"
+            onclick="copyText(this)"
+            value="dhdsh3"
+            readonly
+          />
+          <div class="btn-container" >
+            <button class="output-btn" id="btn-letters-only">Copy</button>
+
+          </div>
+
+        </div>
+
+        <div class="field">
+          <div class="text">Numbers only</div>
+          <input
+            class="passwordOutput"
+            id="onlyNumbers"
+            onclick="copyText(this)"
+            value="dhd"
+            readonly
+          />
+          <div class="btn-container" >
+            <button class="output-btn" id="btn-numbers-only">Copy</button>
+          </div>
+
+        </div>
+
+        <div class="field">
+          <div class="text">Letters and Numbers</div>
+          <input
+            class="passwordOutput"
+            id="lettersAndNumbers"
+            onclick="copyText(this)"
+            value="321321"
+            readonly
+          />
+          <div class="btn-container" >
+            <button class="output-btn" id="btn-letters-and-numbers" >Copy</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
